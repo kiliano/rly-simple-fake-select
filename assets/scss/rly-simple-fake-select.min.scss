@@ -1,0 +1,33 @@
+
+
+// Prefix
+.rly-simple- {
+
+	// Both
+	&select, &fake-select {
+		color: #333;
+		font-family: sans-serif;
+		text-decoration: none;
+		font-size: 14px;
+		border: 1px solid #666;
+		padding: 10px;
+
+	}
+
+	// Only true Select
+	&select {
+
+	}
+	
+	// Only fake Select
+	&fake-select {
+
+	}
+
+	// Fake Options
+	&fake-options {
+
+	}
+
+
+}
