@@ -12,10 +12,11 @@ $(function(){
 
 		// Aparence
 
-		var rlySimpleWidth = $(this).width();
-		var rlySimpleHeight = $(this).height();
+		var rlySimpleWidth = $(this).css("width");
+		var rlySimpleHeight = $(this).css("height");
 
-		$(this).after("<span class='"+rlySimplePrefix+"-fake-select'><a href='javascript:void(0)' class='"+rlySimplePrefix+"-fake-link' style='width: "+rlySimpleWidth+"px; height: "+rlySimpleHeight+"px; line-height: "+rlySimpleHeight+"px;'>"+rlySimpleFirstOption+"</a><ul class='"+rlySimplePrefix+"-fake-options'>"+rlySimpleContent+"</ul></span>");
+
+		$(this).after("<span class='"+rlySimplePrefix+"-fake-select'><a href='javascript:void(0)' class='"+rlySimplePrefix+"-fake-link' style='width: "+rlySimpleWidth+"; height: "+rlySimpleHeight+";'>"+rlySimpleFirstOption+"</a><ul class='"+rlySimplePrefix+"-fake-options'>"+rlySimpleContent+"</ul></span>");
 		
 	});
 
@@ -29,7 +30,7 @@ $(function(){
 		var rlySimpleOptionSelect = $(this).text();
 		var rlySimpleOptionSelectValue = $(this).attr("value");
 
-		$(this).parents("."+rlySimplePrefix+"-fake-select").prev("select").val(rlySimpleOptionSelectValue);
+		$(this).parents("."+rlySimplePrefix+"-fake-select").prev("select").trigger("change").val(rlySimpleOptionSelectValue);
 
 		$(this).parents("."+rlySimplePrefix+"-fake-options").find("li > a").removeClass(rlySimplePrefix+"-active");
 		$(this).addClass(rlySimplePrefix+"-active");
@@ -40,7 +41,8 @@ $(function(){
 	// Clicking on true
 	$("."+rlySimplePrefix+"-select").change(function(){
 		var rlySimpleContentTrueValue = $(this).val();
-		$(this).next("."+rlySimplePrefix+"-fake-select").find("."+rlySimplePrefix+"-fake-options > li > a[value='"+rlySimpleContentTrueValue+"']").click();
+		var rlySimpleContent = $(this).next("."+rlySimplePrefix+"-fake-select").find("."+rlySimplePrefix+"-fake-options > li > a[value='"+rlySimpleContentTrueValue+"']").text();
+		$(this).next("."+rlySimplePrefix+"-fake-select").find("."+rlySimplePrefix+"-fake-link").text(rlySimpleContent);
 	});
 
 	

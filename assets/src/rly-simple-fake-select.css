@@ -7,19 +7,23 @@
   border: 1px solid #666;
   padding: 10px;
   background-color: #fff;
+  vertical-align: top;
   display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 51, ../scss/rly-simple-fake-select.scss */
+/* line 56, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-select {
   position: relative;
   display: inline-block;
 }
-/* line 55, ../scss/rly-simple-fake-select.scss */
+/* line 60, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-select > a {
   display: block;
   position: relative;
 }
-/* line 60, ../scss/rly-simple-fake-select.scss */
+/* line 65, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-select > a:after {
   position: absolute;
   content: " ";
@@ -31,7 +35,7 @@
   border-width: 6px 3px 0 3px;
   border-color: #666 transparent transparent transparent;
 }
-/* line 79, ../scss/rly-simple-fake-select.scss */
+/* line 84, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-options {
   display: none;
   margin: 20px 0 0 0;
@@ -52,7 +56,7 @@
   min-width: 150px;
   z-index: 200;
 }
-/* line 106, ../scss/rly-simple-fake-select.scss */
+/* line 111, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-options:before {
   width: 0;
   height: 0;
@@ -64,48 +68,48 @@
   left: 5px;
   top: -6px;
 }
-/* line 120, ../scss/rly-simple-fake-select.scss */
+/* line 125, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-options > li > a {
   padding: 8px 15px;
   display: block;
   text-decoration: none;
   color: #333;
 }
-/* line 126, ../scss/rly-simple-fake-select.scss */
+/* line 131, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-options > li > a:hover, .rly-simple-fake-options > li > a:focus {
   background-color: rgba(0, 0, 0, 0.1);
   color: #333;
 }
-/* line 137, ../scss/rly-simple-fake-select.scss */
+/* line 142, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-options > li > .rly-simple-active {
   color: #333;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 141, ../scss/rly-simple-fake-select.scss */
+/* line 146, ../scss/rly-simple-fake-select.scss */
 .rly-simple-fake-options > li > .rly-simple-active:hover, .rly-simple-fake-options > li > .rly-simple-active:focus {
   color: #333;
   background-color: rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 991px) {
-  /* line 151, ../scss/rly-simple-fake-select.scss */
+  /* line 156, ../scss/rly-simple-fake-select.scss */
   .rly-simple-select {
     display: none;
   }
 }
 @media (max-width: 991px) {
-  /* line 151, ../scss/rly-simple-fake-select.scss */
+  /* line 156, ../scss/rly-simple-fake-select.scss */
   .rly-simple-select {
     display: inline-block;
   }
 }
 @media (min-width: 991px) {
-  /* line 162, ../scss/rly-simple-fake-select.scss */
+  /* line 167, ../scss/rly-simple-fake-select.scss */
   .rly-simple-fake-select {
     display: inline-block;
   }
 }
 @media (max-width: 991px) {
-  /* line 162, ../scss/rly-simple-fake-select.scss */
+  /* line 167, ../scss/rly-simple-fake-select.scss */
   .rly-simple-fake-select {
     display: none;
   }
