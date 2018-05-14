@@ -148,7 +148,7 @@
 		// Show True only on mobile
 		&-select {
 			@media (min-width: $mobileBreak) {
-				// display: none;
+				display: none;
 			}
 
 			@media (max-width: $mobileBreak) {
