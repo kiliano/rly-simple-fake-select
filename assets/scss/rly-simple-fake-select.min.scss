@@ -1,33 +1,124 @@
+// Variables
+$mobileBreak: 991px;
+
 
 
 // Prefix
-.rly-simple- {
+.rly-simple {
 
-	// Both
-	&select, &fake-select {
+	// Box of Elements
+
+
+	// True Select and Fake Select
+	&-select, &-select-css, &-fake-select > a {
 		color: #333;
 		font-family: sans-serif;
 		text-decoration: none;
 		font-size: 14px;
 		border: 1px solid #666;
 		padding: 10px;
-
 	}
 
 	// Only true Select
-	&select {
-
+	&-select, &-select-css {
+		
 	}
-	
+
 	// Only fake Select
-	&fake-select {
+	&-fake-select {
+		position: relative;
+		display: inline-block;
+
+		> a {
+
+		}
 
 	}
 
 	// Fake Options
-	&fake-options {
+	&-fake-options {
+
+
+		
+		display: none;
+
+		margin: 20px 0 0 0;
+		padding: 0;
+		list-style: none;
+		background-color: #fafafa;
+		border: 1px solid #999;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+		-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+		-ms-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+		-o-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+		box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
+		left: 0;
+        position: absolute;
+        min-width: 150px;
+        
+        z-index: 200;
+        
+        &:before {
+            width: 0; 
+            height: 0; 
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+
+            border-bottom: 6px solid #999;
+            position: absolute;
+            content: " ";
+            left: 5px;
+            top: -6px;
+        }
+
+		>li {
+			> a {
+				padding: 8px 15px;
+				display: block;
+				text-decoration: none;
+				color: #333;
+
+				&:hover, &:focus {
+					background-color: rgba(0,0,0,0.1);
+
+				}
+			}
+		}
 
 	}
+
+	
+
+
+
+	// #### Change fake only on desktop ####
+		// Show True only on mobile
+		&-select {
+			@media (min-width: $mobileBreak) {
+				// display: none;
+			}
+
+			@media (max-width: $mobileBreak) {
+				display: inline-block;
+			}
+		}
+
+		// Show fake only on Desktop
+		&-fake-select {
+			@media (min-width: $mobileBreak) {
+				display: inline-block;
+			}
+
+			@media (max-width: $mobileBreak) {
+				display: none;
+			}
+		}
+
 
 
 }
