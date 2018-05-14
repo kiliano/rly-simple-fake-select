@@ -1,8 +1,23 @@
-// Variables
-$mobileBreak: 991px;
+// Mobile break change (true on mobile)
+	$mobileBreak: 991px;
 
-$selectedColor: #fff;
-$selectedBg: #5e9e86;
+
+// Aparence
+
+	// Select
+	$borderColor: #666;
+	$textColor: #333;
+	$backgroundColor: #fff;
+
+	// Options Box
+	$optionsBorderColor: #999;
+	$optionsBgColor: #fafafa;
+	$optionsTextColor: #333;
+
+
+	// Option hover
+	$selectedColor: #333;
+	$selectedBg: rgba(0,0,0,0.1);
 
 
 
@@ -14,12 +29,13 @@ $selectedBg: #5e9e86;
 
 	// True Select and Fake Select
 	&-select, &-select-css, &-fake-select > a {
-		color: #333;
+		color: $textColor;
 		font-family: sans-serif;
 		text-decoration: none;
 		font-size: 14px;
-		border: 1px solid #666;
+		border: 1px solid $borderColor;
 		padding: 10px;
+		background-color: $backgroundColor;
 
 		display: inline-block;
 	}
@@ -37,6 +53,21 @@ $selectedBg: #5e9e86;
 		> a {
 
 			display: block;
+			position: relative;
+
+			&:after {
+		        position: absolute;
+		        content: " ";
+		        right: 8px;
+		        top: 43%;
+		        
+		        width: 0;
+		        height: 0;
+		        border-style: solid;
+		        border-width: 6px 3px 0 3px;
+		        border-color: $borderColor transparent transparent transparent;
+
+		    }
 
 		}
 
@@ -52,8 +83,8 @@ $selectedBg: #5e9e86;
 		margin: 20px 0 0 0;
 		padding: 0;
 		list-style: none;
-		background-color: #fafafa;
-		border: 1px solid #999;
+		background-color: $optionsBgColor;
+		border: 1px solid $optionsBorderColor;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
@@ -76,7 +107,7 @@ $selectedBg: #5e9e86;
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
 
-            border-bottom: 6px solid #999;
+            border-bottom: 6px solid $optionsBorderColor;
             position: absolute;
             content: " ";
             left: 5px;
@@ -88,10 +119,11 @@ $selectedBg: #5e9e86;
 				padding: 8px 15px;
 				display: block;
 				text-decoration: none;
-				color: #333;
+				color: $optionsTextColor;
 
 				&:hover, &:focus {
-					background-color: rgba(0,0,0,0.1);
+					background-color: $selectedBg;
+					color: $selectedColor;
 
 				}
 			}
