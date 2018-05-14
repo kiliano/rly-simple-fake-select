@@ -1,6 +1,9 @@
 // Variables
 $mobileBreak: 991px;
 
+$selectedColor: #fff;
+$selectedBg: #5e9e86;
+
 
 
 // Prefix
@@ -17,6 +20,8 @@ $mobileBreak: 991px;
 		font-size: 14px;
 		border: 1px solid #666;
 		padding: 10px;
+
+		display: inline-block;
 	}
 
 	// Only true Select
@@ -30,6 +35,8 @@ $mobileBreak: 991px;
 		display: inline-block;
 
 		> a {
+
+			display: block;
 
 		}
 
@@ -90,9 +97,18 @@ $mobileBreak: 991px;
 			}
 		}
 
+
 	}
 
-	
+	&-fake-options > li > &-active {
+		color: $selectedColor; 
+		background-color: $selectedBg;
+
+		&:hover, &:focus {
+			color: $selectedColor; 
+			background-color: $selectedBg;
+		}
+	}
 
 
 
