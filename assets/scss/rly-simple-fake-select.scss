@@ -30,7 +30,7 @@
 
 
 	// True Select and Fake Select
-	&-select, &-select-css, &-fake-select > a {
+	&-select, &-css, &-fake-select > a {
 		color: $textColor;
 		font-family: sans-serif;
 		text-decoration: none;
@@ -48,7 +48,7 @@
 	}
 
 	// Only true Select
-	&-select, &-select-css {
+	&-select, &-css {
 		
 	}
 
@@ -121,7 +121,7 @@
             top: -6px;
         }
 
-		>li {
+		li {
 			> a {
 				padding: 8px 15px;
 				display: block;
@@ -139,7 +139,7 @@
 
 	}
 
-	&-fake-options > li > &-active {
+	&-fake-options li > &-active {
 		color: $selectedColor; 
 		background-color: $selectedBg;
 

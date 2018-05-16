@@ -1,5 +1,5 @@
 /* line 33, ../scss/rly-simple-fake-select.scss */
-.rly-simple-select, .rly-simple-select-css, .rly-simple-fake-select > a {
+.rly-simple-select, .rly-simple-css, .rly-simple-fake-select > a {
   color: #333;
   font-family: sans-serif;
   text-decoration: none;
@@ -69,32 +69,26 @@
   top: -6px;
 }
 /* line 125, ../scss/rly-simple-fake-select.scss */
-.rly-simple-fake-options > li > a {
+.rly-simple-fake-options li > a {
   padding: 8px 15px;
   display: block;
   text-decoration: none;
   color: #333;
 }
 /* line 131, ../scss/rly-simple-fake-select.scss */
-.rly-simple-fake-options > li > a:hover, .rly-simple-fake-options > li > a:focus {
+.rly-simple-fake-options li > a:hover, .rly-simple-fake-options li > a:focus {
   background-color: rgba(0, 0, 0, 0.1);
   color: #333;
 }
 /* line 142, ../scss/rly-simple-fake-select.scss */
-.rly-simple-fake-options > li > .rly-simple-active {
+.rly-simple-fake-options li > .rly-simple-active {
   color: #333;
   background-color: rgba(0, 0, 0, 0.1);
 }
 /* line 146, ../scss/rly-simple-fake-select.scss */
-.rly-simple-fake-options > li > .rly-simple-active:hover, .rly-simple-fake-options > li > .rly-simple-active:focus {
+.rly-simple-fake-options li > .rly-simple-active:hover, .rly-simple-fake-options li > .rly-simple-active:focus {
   color: #333;
   background-color: rgba(0, 0, 0, 0.1);
-}
-@media (min-width: 991px) {
-  /* line 156, ../scss/rly-simple-fake-select.scss */
-  .rly-simple-select {
-    display: none;
-  }
 }
 @media (max-width: 991px) {
   /* line 156, ../scss/rly-simple-fake-select.scss */
